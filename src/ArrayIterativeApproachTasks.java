@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class ArrayIterativeApproachTasks {
     public static void main(String[] args) {
 
@@ -21,28 +23,40 @@ public class ArrayIterativeApproachTasks {
 //        }
 //        System.out.println("Sum of even numbers "+evensum+" & Sum of odd number is "+oddsum);
 
-        // WAP to count the number of positive, negative, and zero elements in a given array.
+//        // WAP to count the number of positive, negative, and zero elements in a given array.
+//
+//        int[] arr1={10,20,0,0,-1,0,-4,10,20};
+//
+//        int positivevalue=0 , zero=0 , negativevalue=0 ;
+//
+//        for(int i=0; i<arr1.length; i++)
+//        {
+//            if(arr1[i]>0)
+//            {
+//                positivevalue++;
+//            }
+//            else if(arr1[i]<0)
+//            {
+//                negativevalue++;
+//            }
+//            else if(arr1[i]==0)
+//            {
+//                zero++;
+//            }
+//        }
+//        System.out.println("positive value is "+positivevalue+" / negative value is  "+negativevalue+" / Zero value is  "+zero);
 
-        int[] arr1={10,20,0,0,-1,0,-4,10,20};
+         //WAP to calculate the average of all elements in a given array .
 
-        int positivevalue=0 , zero=0 , negativevalue=0 ;
+        int[] arr2={10,20,30,40,50};
 
-        for(int i=0; i<arr1.length; i++)
-        {
-            if(arr1[i]>0)
-            {
-                positivevalue++;
-            }
-            else if(arr1[i]<0)
-            {
-                negativevalue++;
-            }
-            else if(arr1[i]==0)
-            {
-                zero++;
-            }
-        }
-        System.out.println("positive value is "+positivevalue+" / negative value is  "+negativevalue+" / Zero value is  "+zero);
+            int totalsum=0;
+           for(int i=0; i<arr2.length; i++)
+           {
+               totalsum +=arr2[i];
+           }
+           int result=totalsum /arr2.length;
 
+           System.out.println(result);
     }
 }
