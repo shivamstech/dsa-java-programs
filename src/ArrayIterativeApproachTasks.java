@@ -147,30 +147,86 @@ public class ArrayIterativeApproachTasks {
 
         //=========================================================
 
-        //WAP to find the greatest and smallest number in an array
+//        //WAP to find the greatest and smallest number in an array
+//
+//        int[] arr7={20,50,39,40,28,38,20,66,78};
+//
+//        int minValue=arr7[0];
+//        int maxValue=arr7[arr7.length-1];
+//
+//        for(int i=0; i<arr7.length; i++)
+//        {
+//            if(minValue>arr7[i])
+//            {
+//                int temp=minValue;
+//                minValue=arr7[i];
+//                arr7[i]=temp;
+//
+//            }
+//            if(maxValue<arr7[i])
+//            {
+//                int temp=maxValue;
+//                maxValue=arr7[i];
+//                arr7[i]=temp;
+//            }
+//        }
+//        System.out.println("Min Value is "+minValue+" Max Value is "+maxValue);
 
-        int[] arr7={20,50,39,40,28,38,20,66,78};
+        //==============================================================
+//
+//        //WAP to find the Second Largest Element in an array
+//
+//        int[] arr8={99,20,40,88,57,37,48,88};
+//
+//          int largest= Integer.MIN_VALUE;
+//          int secondlargest= Integer.MIN_VALUE;
+//
+//          for(int i=0; i<arr8.length; i++)
+//          {
+//              if(largest<arr8[i])
+//              {
+//                    secondlargest=largest;
+//                  largest=arr8[i];
+//              }
+//              else if(arr8[i]<largest && secondlargest<arr8[i])
+//              {
+//                  secondlargest=arr8[i];
+//              }
+//
+//          }
+//
+//          System.out.println(secondlargest);
 
-        int minValue=arr7[0];
-        int maxValue=arr7[arr7.length-1];
+        //========================================================================
 
-        for(int i=0; i<arr7.length; i++)
+        //WAP to check if two arrays are same or not
+
+        int[] arr9={10,20,30,40,50,60};
+        int[] arr10={10,20,88,40,50,60};
+
+        int n1=arr9.length;
+        int n2=arr10.length;
+        boolean same=true;
+
+        if(n1!=n2)
         {
-            if(minValue>arr7[i])
+            System.out.println("Arrays are not same");
+            return;
+        }
+        for(int i=0; i<n1; i++)
+        {
+            if(arr9[i]!=arr10[i])
             {
-                int temp=minValue;
-                minValue=arr7[i];
-                arr7[i]=temp;
-
-            }
-            if(maxValue<arr7[i])
-            {
-                int temp=maxValue;
-                maxValue=arr7[i];
-                arr7[i]=temp;
+                same=false;
+                break;
             }
         }
-        System.out.println("Min Value is "+minValue+" Max Value is "+maxValue);
-
+        if(same)
+        {
+            System.out.println("Array are same ");
+        }
+        else {
+            System.out.println("Array are not same ");
+        }
     }
 }
