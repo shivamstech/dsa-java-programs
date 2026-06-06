@@ -199,34 +199,85 @@ public class ArrayIterativeApproachTasks {
 
         //========================================================================
 
-        //WAP to check if two arrays are same or not
+//        //WAP to check if two arrays are same or not
+//
+//        int[] arr9={10,20,30,40,50,60};
+//        int[] arr10={10,20,88,40,50,60};
+//
+//        int n1=arr9.length;
+//        int n2=arr10.length;
+//        boolean same=true;
+//
+//        if(n1!=n2)
+//        {
+//            System.out.println("Arrays are not same");
+//            return;
+//        }
+//        for(int i=0; i<n1; i++)
+//        {
+//            if(arr9[i]!=arr10[i])
+//            {
+//                same=false;
+//                break;
+//            }
+//        }
+//        if(same)
+//        {
+//            System.out.println("Array are same ");
+//        }
+//        else {
+//            System.out.println("Array are not same ");
+//        }
 
-        int[] arr9={10,20,30,40,50,60};
-        int[] arr10={10,20,88,40,50,60};
+        //===================================================================
 
-        int n1=arr9.length;
-        int n2=arr10.length;
-        boolean same=true;
+//        //WAP to check is array sorted or not
+//
+//        int[] arr11={10,20,30,50,60};
+//
+//        boolean sorted=true;
+//        for(int i=0; i<arr11.length-1; i++)
+//        {
+//            if(arr11[i]>arr11[i+1])
+//            {
+//                sorted=false;
+//                break;
+//            }
+//        }
+//        if(sorted)
+//        {
+//            System.out.println("Array are sorted");
+//        }
+//        else {
+//            System.out.println("Array are not sorted");
+//        }
 
-        if(n1!=n2)
-        {
-            System.out.println("Arrays are not same");
-            return;
-        }
-        for(int i=0; i<n1; i++)
-        {
-            if(arr9[i]!=arr10[i])
-            {
-                same=false;
-                break;
-            }
-        }
-        if(same)
-        {
-            System.out.println("Array are same ");
-        }
-        else {
-            System.out.println("Array are not same ");
-        }
+        //==============================================================
+//
+//        //WAP to reverse an array elements
+//        //Using temporary array
+//
+//        int[] arr12={10,20,30,40,50};
+//        int[] arr13=new int[arr12.length];
+//
+//        for(int i=0; i<arr12.length; i++)
+//        {
+//            arr13[i]=arr12[arr12.length-1-i];
+//        }
+//
+//        for(int a:arr13)
+//        {
+//            System.out.print(" "+a);
+//        }
+
+        //==================================================================
+
+        //WAP to reverse an array elements
+        //In-place without using another array
+
+        int[] arr13={10,20,30,40,50};
+
+
+
     }
 }
