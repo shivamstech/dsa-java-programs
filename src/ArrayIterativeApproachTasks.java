@@ -271,13 +271,125 @@ public class ArrayIterativeApproachTasks {
 //        }
 
         //==================================================================
+//
+//        //WAP to reverse an array elements
+//        //In-place without using another array
+//
+//        int[] arr13={85,20,30,40,50};
+//
+//        for(int i=0; i<arr13.length/2; i++)
+//        {
+//            int temp=arr13[i];
+//            arr13[i]=arr13[arr13.length-1-i];
+//            arr13[arr13.length-1-i]=temp;
+//
+//        }
+//
+//        System.out.print("[");
+//        for(int a:arr13)
+//        {
+//            System.out.print(" "+a);
+//        }
+//        System.out.print(" ]");
 
-        //WAP to reverse an array elements
-        //In-place without using another array
+        //===========================================================================
 
-        int[] arr13={10,20,30,40,50};
+        //WAP to reverse Elements Between Two Given Indices
+
+//        int[] arr14={10, 20, 30, 40, 50, 60, 70};
+//
+//        int startindex=0;
+//        int endindex=6;
+//        int count=0;
+//
+//       for(int i=startindex; i<=(endindex+startindex)/2; i++)
+//       {
+//          int temp=arr14[i];
+//          arr14[i]=arr14[endindex-count];
+//          arr14[endindex-count]=temp;
+//          count++;
+//       }
+//
+//        for(int a:arr14)
+//        {
+//            System.out.print(" "+a);
+//        }
+//
+
+       //______________________________________________
+
+        //         second approuch
+
+//        int[] arr14 = {10, 20, 30, 40, 50, 60, 70};
+//
+//        int startindex = 2;
+//        int endindex = 5;
+//
+//        while(startindex < endindex)
+//        {
+//            int temp = arr14[startindex];
+//            arr14[startindex] = arr14[endindex];
+//            arr14[endindex] = temp;
+//
+//            startindex++;
+//            endindex--;
+//        }
+//
+//        for(int a : arr14)
+//        {
+//            System.out.print(a + " ");
+//        }
+
+      //===============================================================================
+//            //o WAP to move all zeros to the end of an array
+//            //Using temporary array
+//
+//            int[] arr15={10,20,0,0,30,0,40,50,0,0,60};
+//
+//            int[] arrtemp=new int[arr15.length];
+//            int count=0;
+//
+//            for(int i=0; i<arr15.length; i++)
+//            {
+//                if(arr15[i]!=0)
+//                {
+//                    arrtemp[count]=arr15[i];
+//                    count++;
+//                }
+//            }
+//            for(int a:arrtemp)
+//            {
+//                System.out.print(" "+a);
+//            }
+
+          //=======================================================
+
+        //WAP to move all zeros to the end of an array
+        //Without temporary array
+
+        int[] arr16={10,20,0,0,30,0,40,50,0,0,60};
+
+        int index=0;
+
+        for(int i=0;i<arr16.length-1;i++)
+        {
+            if(arr16[i]!=0)
+            {
+                arr16[index]=arr16[i];
+                index++;
+            }
+        }
+        while(index < arr16.length)
+        {
+            arr16[index]=0;
+
+            index++;
+        }
 
 
-
+        for(int a:arr16)
+        {
+            System.out.print(" "+a);
+        }
     }
 }
