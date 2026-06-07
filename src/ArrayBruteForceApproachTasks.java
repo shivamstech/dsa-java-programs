@@ -70,11 +70,47 @@ public class ArrayBruteForceApproachTasks {
 
         //=============================================================
 
-        // o WAP to print only the elements with frequency greater than 1
+//        // o WAP to print only the elements with frequency greater than 1
+//
+//        int[] arr = {10, 20, 10, 30, 20, 40, 10};
+//
+//        int n = arr.length;
+//
+//        boolean[] bArr = new boolean[n];
+//
+//        for(int i=0; i<n; i++)
+//        {
+//            if(bArr[i])
+//            {
+//                continue;
+//            }
+//
+//            int count = 1;
+//            for(int j=i+1; j<n; j++)
+//            {
+//                if(arr[i] == arr[j])
+//                {
+//                    count++;
+//                    bArr[j] = true;
+//                }
+//            }
+//
+//            if(count > 1)
+//            {
+//                System.out.println(arr[i]+" -> "+count+" times");
+//            }
+//        }
 
-        int[] arr = {10, 20, 10, 30, 20, 40, 10};
+        //===================================================
+
+        // o WAP to find the element with the highest frequency
+
+        int[] arr = {10, 20, 10, 30, 20, 40, 10, 20, 50, 20, 10};
 
         int n = arr.length;
+
+        int maxCount = 0;
+        int maxElement = arr[0];
 
         boolean[] bArr = new boolean[n];
 
@@ -95,11 +131,15 @@ public class ArrayBruteForceApproachTasks {
                 }
             }
 
-            if(count > 1)
+            if(count > maxCount)
             {
-                System.out.println(arr[i]+" -> "+count+" times");
+                maxCount = count;
+                maxElement = arr[i];
             }
         }
+
+        System.out.println(maxElement+" -> "+maxCount+" times");
+
 
     }
 }
