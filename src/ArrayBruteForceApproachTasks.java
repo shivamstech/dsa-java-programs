@@ -245,21 +245,59 @@ public class ArrayBruteForceApproachTasks {
 
         // o WAP to find all pairs of elements whose sum equals to target
 
-        int[] arr = {2, 3, 5, 7, 8, 9, 11, 15};
-        int target = 12;
+//        int[] arr = {2, 3, 5, 7, 8, 9, 11, 15};
+//        int target = 12;
+//
+//        int n = arr.length;
+//
+//        for(int i=0; i<n; i++)
+//        {
+//            for(int j=i+1; j<n; j++)
+//            {
+//                if(arr[i]+arr[j] == target)
+//                {
+//                    System.out.println(arr[i]+" - "+arr[j]);
+//                }
+//            }
+//        }
+
+        //=======================================================================
+
+        //o WAP to remove duplicate elements in an array
+        //    -> Using temporary array
+
+        int[] arr = {10, 20, 10, 50, 20, 30, 40};
 
         int n = arr.length;
+        int[] temp = new int[n];
+
+        int index = 0;
 
         for(int i=0; i<n; i++)
         {
-            for(int j=i+1; j<n; j++)
+            boolean isDuplicate = false;
+
+            for(int j=0; j<index; j++)
             {
-                if(arr[i]+arr[j] == target)
+                if(arr[i] == temp[j])
                 {
-                    System.out.println(arr[i]+" - "+arr[j]);
+                    isDuplicate = true;
+                    break;
                 }
             }
+
+            if(!isDuplicate)
+            {
+                temp[index] = arr[i];
+                index++;
+            }
         }
+
+        for(int no : temp)
+        {
+            System.out.print(no+" ");
+        }
+
 
 
     }
