@@ -201,44 +201,64 @@ public class ArrayBruteForceApproachTasks {
 
         //======================================================================
 
-        // o WAP to find the first non-Repeating Element
+//        // o WAP to find the first non-Repeating Element
+//
+//        int[] arr = {10, 20, 10, 20, 10, 30};
+//
+//        int n = arr.length;
+//
+//        boolean[] bArr = new boolean[n];
+//
+//        boolean found = false;
+//
+//        for(int i=0; i<n; i++)
+//        {
+//            if(bArr[i])
+//            {
+//                continue;
+//            }
+//
+//            int count = 1;
+//            for(int j=i+1; j<n; j++)
+//            {
+//                if(arr[i] == arr[j])
+//                {
+//                    count++;
+//                    bArr[j] = true;
+//                }
+//            }
+//
+//            if(count == 1)
+//            {
+//                found = true;
+//                System.out.println("First non-repeating element is "+arr[i]);
+//                break;
+//            }
+//        }
+//
+//        if(!found)
+//        {
+//            System.out.println("Non-repeating element not found");
+//        }
 
-        int[] arr = {10, 20, 10, 20, 10, 30};
+        //===========================================================================
+
+        // o WAP to find all pairs of elements whose sum equals to target
+
+        int[] arr = {2, 3, 5, 7, 8, 9, 11, 15};
+        int target = 12;
 
         int n = arr.length;
 
-        boolean[] bArr = new boolean[n];
-
-        boolean found = false;
-
         for(int i=0; i<n; i++)
         {
-            if(bArr[i])
-            {
-                continue;
-            }
-
-            int count = 1;
             for(int j=i+1; j<n; j++)
             {
-                if(arr[i] == arr[j])
+                if(arr[i]+arr[j] == target)
                 {
-                    count++;
-                    bArr[j] = true;
+                    System.out.println(arr[i]+" - "+arr[j]);
                 }
             }
-
-            if(count == 1)
-            {
-                found = true;
-                System.out.println("First non-repeating element is "+arr[i]);
-                break;
-            }
-        }
-
-        if(!found)
-        {
-            System.out.println("Non-repeating element not found");
         }
 
 
