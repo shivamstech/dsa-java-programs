@@ -1,33 +1,65 @@
 public class ArraySortingOperation {
 
     public static void main(String[] args) {
-        //  Bubble sort
+//
+//        // * Bubble sort
+//
+//        int[] arr={10,40,30,50,20};
+//
+//        for(int i=0; i<arr.length ; i++)
+//        {
+//            boolean swapped=false;
+//            for(int j=0; j<arr.length-1; j++)
+//            {
+//                if(arr[j]>arr[j+1])
+//                {
+//
+//                    int temp=arr[j];
+//                    arr[j]=arr[j+1];
+//                    arr[j+1]=temp;
+//                    swapped=true;
+//                }
+//            }
+//            if(!swapped)
+//            {
+//                break;
+//            }
+//        }
+//        for(int a:arr)
+//        {
+//            System.out.print(" "+a);
+//        }
 
-        int[] arr={10,40,30,50,20};
+        //=================================================================
 
-        for(int i=0; i<arr.length ; i++)
+        // * Selection Sort
+
+        int[] arr = {32, 12, 25, 18, 42, 83, 91, 34, 55, 71, 6, 28};
+
+        int n = arr.length;
+
+        for(int i=0; i<n; i++)
         {
-            boolean swapped=false;
-            for(int j=0; j<arr.length-1; j++)
-            {
-                if(arr[j]>arr[j+1])
-                {
+            int minIndex = i;
 
-                    int temp=arr[j];
-                    arr[j]=arr[j+1];
-                    arr[j+1]=temp;
-                    swapped=true;
+            for(int j=i+1; j<n; j++)
+            {
+                if(arr[minIndex] > arr[j])
+                {
+                    minIndex = j;
                 }
             }
-            if(!swapped)
-            {
-                break;
-            }
+
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
         }
-        for(int a:arr)
+
+        for(int no : arr)
         {
-            System.out.print(" "+a);
+            System.out.print(no+" ");
         }
+
 
     }
 }
