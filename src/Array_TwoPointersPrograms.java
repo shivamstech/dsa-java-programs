@@ -102,45 +102,69 @@ public class Array_TwoPointersPrograms {
 
     //==============================================================
 
+//
+//    // 3.1 Second way WAP to move all zeros to the end of an array
+//
+//
+//    public static void main(String[] args) {
+//
+//        int[] arr = {5, 0, 6, 3, 0, 0, 0, 1, 2, 0, 7};
+//
+//          int L=0;
+//          int R=arr.length-1;
+//
+//          while(L<R)
+//          {
+//              if(arr[L]!=0)
+//              {
+//                  L++;
+//              }
+//              else if(arr[R]==0)
+//              {
+//                  R--;
+//              }
+//              else
+//              {
+//                  int temp=arr[L];
+//                  arr[L]=arr[R];
+//                  arr[R]=temp;
+//
+//                  L++;
+//                  R--;
+//              }
+//
+//
+//          }
+//            for(int a:arr)
+//            {
+//                System.out.print(" "+a);
+//            }
+//
+//    }
 
-    // 3.1 Second way WAP to move all zeros to the end of an array
+    //============================================================================
 
+    // *WAP to reverse an array elements
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+        int[] arr = {10, 20, 30, 40, 50, 60, 70,80,};
 
-        int[] arr = {5, 0, 6, 3, 0, 0, 0, 1, 2, 0, 7};
+        int L = 0;
+        int R = arr.length - 1;
 
-          int L=0;
-          int R=arr.length-1;
+        while(L<R)
+        {
+            int temp=arr[L];
+            arr[L]=arr[R];
+            arr[R]=temp;
 
-          while(L<R)
-          {
-              if(arr[L]!=0)
-              {
-                  L++;
-              }
-              else if(arr[R]==0)
-              {
-                  R--;
-              }
-              else
-              {
-                  int temp=arr[L];
-                  arr[L]=arr[R];
-                  arr[R]=temp;
-
-                  L++;
-                  R--;
-              }
-
-
-          }
-            for(int a:arr)
-            {
-                System.out.print(" "+a);
-            }
-
+            L++;
+            R--;
+        }
+        for(int a:arr)
+        {
+            System.out.print(" "+a);
+        }
     }
-
-
 }
