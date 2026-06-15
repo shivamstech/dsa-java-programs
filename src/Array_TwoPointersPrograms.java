@@ -170,39 +170,39 @@ public class Array_TwoPointersPrograms {
 
     //=====================================================================
 
-    // * WAP to shift all negative numbers to left side and positive to right side
-    public static void main(String[] args) {
-
-        int[] arr = {10, -4, -3, 20, 50, -7, 30};
-
-        int L=0;
-        int R=arr.length-1;
-
-        while(L<R)
-        {
-            if(arr[L] < 0)
-            {
-                 L++;
-            }
-            else if(arr[R]>=0)
-            {
-                R--;
-            }
-            else
-            {
-                int temp=arr[L];
-                arr[L]=arr[R];
-                arr[R]=temp;
-
-                L++;
-                R--;
-            }
-
-        }
-        for(int a:arr)
-        {
-            System.out.print(" "+a);
-        }
-    }
+//    // * WAP to shift all negative numbers to left side and positive to right side
+//    public static void main(String[] args) {
+//
+//        int[] arr = {10, -4, -3, 20, 50, -7, 30};
+//
+//        int L=0;
+//        int R=arr.length-1;
+//
+//        while(L<R)
+//        {
+//            if(arr[L] < 0)
+//            {
+//                 L++;
+//            }
+//            else if(arr[R]>=0)
+//            {
+//                R--;
+//            }
+//            else
+//            {
+//                int temp=arr[L];
+//                arr[L]=arr[R];
+//                arr[R]=temp;
+//
+//                L++;
+//                R--;
+//            }
+//
+//        }
+//        for(int a:arr)
+//        {
+//            System.out.print(" "+a);
+//        }
+//    }
 
 }
