@@ -1,5 +1,7 @@
 public class Array_TwoPointersPrograms {
 
+    //1. WAP to check if array is palindrome or not ?
+
 //    static boolean isPalindrome(int[] arr)
 //    {
 //        int L = 0;
@@ -29,6 +31,8 @@ public class Array_TwoPointersPrograms {
 
     //===========================================================================
 
+    // 2. WAP to remove duplicate elements from a sorted array
+//
 //    public static void main(String[] args) {
 //
 //
@@ -60,33 +64,83 @@ public class Array_TwoPointersPrograms {
 //            System.out.print(arr[i] + " ");
 //        }
 //
+//  //        for(int a:arr)
+//  //        {
+//  //            System.out.print(" "+a);
+//  //        }
 //
 //    }
 
     //============================================================================
 
+    // 3. WAP to move all zeros to the end of an array
+
+//    public static void main(String[] args) {
+//
+//        int[] arr = {5, 0, 6, 3, 0, 0, 0, 1, 2, 0, 7};
+//
+//        int L = 0;
+//
+//        for(int R=0; R<arr.length; R++)
+//        {
+//            if(arr[R] != 0)
+//            {
+//                int temp = arr[L];
+//                arr[L] = arr[R];
+//                arr[R] = temp;
+//
+//                L++;
+//            }
+//        }
+//
+//        for(int no : arr)
+//        {
+//            System.out.print(no+" ");
+//        }
+//
+//    }
+
+    //==============================================================
+
+
+    // 3.1 Second way WAP to move all zeros to the end of an array
+
+
     public static void main(String[] args) {
 
         int[] arr = {5, 0, 6, 3, 0, 0, 0, 1, 2, 0, 7};
 
-        int L = 0;
+          int L=0;
+          int R=arr.length-1;
 
-        for(int R=0; R<arr.length; R++)
-        {
-            if(arr[R] != 0)
+          while(L<R)
+          {
+              if(arr[L]!=0)
+              {
+                  L++;
+              }
+              else if(arr[R]==0)
+              {
+                  R--;
+              }
+              else
+              {
+                  int temp=arr[L];
+                  arr[L]=arr[R];
+                  arr[R]=temp;
+
+                  L++;
+                  R--;
+              }
+
+
+          }
+            for(int a:arr)
             {
-                int temp = arr[L];
-                arr[L] = arr[R];
-                arr[R] = temp;
-
-                L++;
+                System.out.print(" "+a);
             }
-        }
-
-        for(int no : arr)
-        {
-            System.out.print(no+" ");
-        }
 
     }
+
+
 }
