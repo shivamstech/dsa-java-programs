@@ -205,4 +205,51 @@ public class Array_TwoPointersPrograms {
 //        }
 //    }
 
+
+    //=============================================================================
+
+    //* Another way  WAP to shift all negative numbers to left side and positive to right side
+    // and Zero in middle.
+
+    public static void main(String[] args) {
+
+
+        int[] arr = {10, -4, 0, -3, 20, 50, -7, 0, 30};
+
+        int low = 0;   // negatives ke liye
+        int mid = 0;   // current element
+        int high = arr.length - 1; // positives ke liye
+
+        while (mid <= high)
+        {
+            if (arr[mid] < 0)
+            {   // Negative -> Left
+                int temp = arr[low];
+                arr[low] = arr[mid];
+                arr[mid] = temp;
+
+                low++;
+                mid++;
+            }
+            else if (arr[mid] == 0)
+            { // Zero -> Middle
+                mid++;
+            }
+            else
+            {   // Positive -> Right
+                int temp = arr[mid];
+                arr[mid] = arr[high];
+                arr[high] = temp;
+
+                high--;
+            }
+        }
+
+        for (int a : arr)
+        {
+            System.out.print(a + " ");
+        }
+    }
+
+
 }
