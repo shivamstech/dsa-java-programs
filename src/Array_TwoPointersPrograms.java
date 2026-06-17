@@ -253,29 +253,30 @@ public class Array_TwoPointersPrograms {
 //
          //=================================================================================
 
-    // Remove duplicate
+//    // Remove duplicate
+//
+//    public int removeDuplicates(int[] nums) {
+//
+//        int L=0;
+//
+//        for(int R=1; R<nums.length; R++)
+//        {
+//            if(nums[L]!=nums[R])
+//            {
+//                L++;
+//                nums[L]=nums[R];
+//
+//            }
+//        }
+//        return L+1;
+//    }
+//    public static void main(String[] args) {
+//
+//        int[] nums={0,0,1,1,1,2,2,3,3,4};
+//
+//        Array_TwoPointersPrograms ob=new Array_TwoPointersPrograms();
+//
+//        System.out.println(ob.removeDuplicates(nums));
+//    }
 
-    public int removeDuplicates(int[] nums) {
-
-        int L=0;
-
-        for(int R=1; R<nums.length; R++)
-        {
-            if(nums[L]!=nums[R])
-            {
-                L++;
-                nums[L]=nums[R];
-
-            }
-        }
-        return L+1;
-    }
-    public static void main(String[] args) {
-
-        int[] nums={0,0,1,1,1,2,2,3,3,4};
-
-        Array_TwoPointersPrograms ob=new Array_TwoPointersPrograms();
-
-        System.out.println(ob.removeDuplicates(nums));
-    }
 }
