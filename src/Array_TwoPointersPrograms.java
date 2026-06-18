@@ -281,35 +281,37 @@ public class Array_TwoPointersPrograms {
 
     //================================================================
 
-     // 27. Remove Element   Leetcode
+//     // 27. Remove Element   Leetcode
+//
+//
+//        public int removeElement(int[] nums, int val)
+//        {
+//            int L = 0;
+//
+//            for(int R=0; R<nums.length; R++)
+//            {
+//                if(nums[R] != val)
+//                {
+//                    nums[L] = nums[R];
+//                    L++;
+//                }
+//            }
+//
+//            return L;
+//        }
+//
+//    public static void main(String[] args) {
+//
+//        int[] nums={0,1,2,2,3,0,4,2};
+//        int val = 2;
+//        Array_TwoPointersPrograms ob=new Array_TwoPointersPrograms();
+//
+//        System.out.println(ob.removeElement(nums,val));
+//
+//    }
+//
 
+   //====================================================================
 
-        public int removeElement(int[] nums, int val)
-        {
-            int L = 0;
-
-            for(int R=0; R<nums.length; R++)
-            {
-                if(nums[R] != val)
-                {
-                    nums[L] = nums[R];
-                    L++;
-                }
-            }
-
-            return L;
-        }
-
-    public static void main(String[] args) {
-
-        int[] nums={0,1,2,2,3,0,4,2};
-        int val = 2;
-        Array_TwoPointersPrograms ob=new Array_TwoPointersPrograms();
-
-        System.out.println(ob.removeElement(nums,val));
-
-    }
-
-
-
+    //
 }
