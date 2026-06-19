@@ -313,5 +313,28 @@ public class Array_TwoPointersPrograms {
 
    //====================================================================
 
-    //
+    // 283. Move Zeroes
+
+
+        public void moveZeroes(int[] nums) {
+
+            int L = 0;
+
+            for(int R=0; R<nums.length; R++)
+            {
+                if(nums[R] != 0)
+                {
+                    nums[L] = nums[R];
+                    L++;
+                }
+            }
+
+            for(int i=L; i<nums.length; i++)
+            {
+                nums[i] = 0;
+            }
+
+        }
+
+
 }
