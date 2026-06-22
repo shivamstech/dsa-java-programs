@@ -338,35 +338,37 @@ public class Array_TwoPointersPrograms {
 
     //====================================================================
 
-    // * 167. Two Sum II - Input Array Is Sorted leetcode
+//    // * 167. Two Sum II - Input Array Is Sorted leetcode
+//
+//    public int[] twoSum(int[] numbers, int target)
+//    {
+//        int n = numbers.length;
+//
+//        int L = 0;
+//        int R = n-1;
+//
+//        while(L < R)
+//        {
+//            int sum = numbers[L] + numbers[R];
+//
+//            if(sum == target)
+//            {
+//                return new int[]{L+1, R+1};
+//            }
+//            else if(sum < target)
+//            {
+//                L++;
+//            }
+//            else
+//            {
+//                R--;
+//            }
+//        }
+//
+//        return new int[]{};
+//    }
 
-    public int[] twoSum(int[] numbers, int target)
-    {
-        int n = numbers.length;
-
-        int L = 0;
-        int R = n-1;
-
-        while(L < R)
-        {
-            int sum = numbers[L] + numbers[R];
-
-            if(sum == target)
-            {
-                return new int[]{L+1, R+1};
-            }
-            else if(sum < target)
-            {
-                L++;
-            }
-            else
-            {
-                R--;
-            }
-        }
-
-        return new int[]{};
-    }
+    //===========================================================================
 
 
 }
