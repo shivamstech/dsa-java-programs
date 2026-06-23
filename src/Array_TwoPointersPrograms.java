@@ -370,37 +370,37 @@ public class Array_TwoPointersPrograms {
 
     //===========================================================================
 
-    //11. Container With Most Water Leetcode
-
-    public int maxArea(int[] height)
-    {
-        int n = height.length;
-
-        int L = 0;
-        int R = n-1;
-
-        int maxArea = 0;
-
-        while(L < R)
-        {
-            int cHeight = Math.min(height[L], height[R]);
-            int cWidth = R - L;
-
-            int area = cHeight * cWidth;
-
-            maxArea = Math.max(maxArea, area);
-
-            if(height[L] < height[R])
-            {
-                L++;
-            }
-            else
-            {
-                R--;
-            }
-        }
-
-        return maxArea;
-    }
+//    //11. Container With Most Water Leetcode
+//
+//    public int maxArea(int[] height)
+//    {
+//        int n = height.length;
+//
+//        int L = 0;
+//        int R = n-1;
+//
+//        int maxArea = 0;
+//
+//        while(L < R)
+//        {
+//            int cHeight = Math.min(height[L], height[R]);
+//            int cWidth = R - L;
+//
+//            int area = cHeight * cWidth;
+//
+//            maxArea = Math.max(maxArea, area);
+//
+//            if(height[L] < height[R])
+//            {
+//                L++;
+//            }
+//            else
+//            {
+//                R--;
+//            }
+//        }
+//
+//        return maxArea;
+//    }
 
 }
