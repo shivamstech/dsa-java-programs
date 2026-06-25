@@ -405,43 +405,43 @@ public class Array_TwoPointersPrograms {
 
     //=======================================================================
 
-    //42. Trapping Rain Water
-
-    public int trap(int[] height)
-    {
-        int L = 0;
-        int R = height.length - 1;
-
-        int leftMax = 0;
-        int rightMax = 0;
-
-        int water = 0;
-
-        while(L < R)
-        {
-            if(leftMax < height[L])
-            {
-                leftMax = height[L];
-            }
-
-            if(rightMax < height[R])
-            {
-                rightMax = height[R];
-            }
-
-            if(leftMax < rightMax)
-            {
-                water = water + (leftMax - height[L]);
-                L++;
-            }
-            else
-            {
-                water = water + (rightMax - height[R]);
-                R--;
-            }
-        }
-
-        return water;
-    }
+//    //42. Trapping Rain Water
+//
+//    public int trap(int[] height)
+//    {
+//        int L = 0;
+//        int R = height.length - 1;
+//
+//        int leftMax = 0;
+//        int rightMax = 0;
+//
+//        int water = 0;
+//
+//        while(L < R)
+//        {
+//            if(leftMax < height[L])
+//            {
+//                leftMax = height[L];
+//            }
+//
+//            if(rightMax < height[R])
+//            {
+//                rightMax = height[R];
+//            }
+//
+//            if(leftMax < rightMax)
+//            {
+//                water = water + (leftMax - height[L]);
+//                L++;
+//            }
+//            else
+//            {
+//                water = water + (rightMax - height[R]);
+//                R--;
+//            }
+//        }
+//
+//        return water;
+//    }
 
 }
